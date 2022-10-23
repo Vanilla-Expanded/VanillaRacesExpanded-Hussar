@@ -1,5 +1,5 @@
 <ModMetaData>
-	<name>Vanilla Races Expanded - Saurid</name>
+	<name>Vanilla Races Expanded - Hussar</name>
 	<author>Oskar Potocki, Neronix17</author>
 	<supportedVersions>
 
@@ -29,7 +29,7 @@
 
 	</loadAfter>
 
-	<packageId>vanillaracesexpanded.saurid</packageId>
+	<packageId>vanillaracesexpanded.hussar</packageId>
 	<description>
 
 
