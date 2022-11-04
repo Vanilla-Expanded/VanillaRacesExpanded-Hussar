@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<VFECore.Abilities.AbilityDef>
+		<defName>VREH_ShortJump</defName>
+		<label>short jump</label>
+		<description>Using hussar wings, propel yourself into the air and glide a short distance.</description>
+		<abilityClass>VREHussar.Ability_ShortJump</abilityClass> <!-- placeholder name -->
+		<targetMode>Location</targetMode>
+		<castSound>Longjump_Jump</castSound>
+		<iconPath>Abilities/HussarJumpAbility</iconPath>
+		<castTime>60</castTime>
+	</VFECore.Abilities.AbilityDef>
+	
+	<ThingDef ParentName="PawnFlyerBase">
+		<defName>VREH_ShortJumpPawn</defName>
+		<thingClass>VREHussar.PawnFlyer_ShortJump</thingClass> <!-- placeholder name -->
+		<pawnFlyer>
+			<flightDurationMin>0.5</flightDurationMin>
+			<flightSpeed>12</flightSpeed>
+		</pawnFlyer>
+	</ThingDef>
+  
+</Defs>
