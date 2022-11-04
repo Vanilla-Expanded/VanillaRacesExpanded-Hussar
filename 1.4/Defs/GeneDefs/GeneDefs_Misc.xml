@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneDef>
+    <defName>VREH_Dutiful</defName>
+    <label>dutiful</label>
+    <description>Carriers of this gene have a greatly increased sense of duty and will never break down when drafted.</description>
+    <iconPath>UI/GeneIcons/Gene_Dutiful</iconPath>
+    <biostatMet>-1</biostatMet>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>10</displayOrderInCategory>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>obedient</symbol></li>
+        <li><symbol>loyal</symbol></li>
+        <li><symbol>dutiful</symbol></li>
+        <li><symbol>steadfast</symbol></li>
+        <li><symbol>steady</symbol></li>
+        <li><symbol>composed</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+  <GeneDef>
+    <defName>VREH_BulletproofSkin</defName>
+    <label>bulletproof skin</label>
+    <description>Carriers of this gene have their skin reinforced by organic kevlar-like strands, allowing them to deflect smaller calliber bullets and only end up with bruises.</description>
+    <iconPath>UI/GeneIcons/Gene_BulletproofSkin</iconPath>
+    <biostatMet>-1</biostatMet>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>11</displayOrderInCategory>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>bulletproof</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>kevlar</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>resistant</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+  <GeneDef>
+    <defName>VREH_Giant</defName>
+    <label>giant</label>
+    <description>Carriers of this gene are slightly larger than baseline humans.</description>
+    <iconPath>UI/GeneIcons/Gene_BulletproofSkin</iconPath>
+    <biostatMet>0</biostatMet>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>12</displayOrderInCategory>
+  </GeneDef>
+  
+  <GeneDef>
+    <defName>VREH_Toughness</defName>
+    <label>toughness</label>
+    <description>Carriers of this gene have thick skin, dense flesh, and durable bones, and take much less damage than other people from the same blows.</description>
+    <iconPath>UI/GeneIcons/Gene_Toughness</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>551</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <forcedTraits>
+      <li>
+        <def>Tough</def>
+      </li>
+    </forcedTraits>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>hard</symbol></li>
+		<li><symbol>tough</symbol></li>
+		<li><symbol>heavy</symbol></li>
+		<li><symbol>strong</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>VREH_ClothedSpeed</defName>
+    <label>clothed speed</label>
+    <description>Carriers of this gene move faster while clothed, and slower while naked.</description>
+    <iconPath>UI/GeneIcons/Gene_ClothedSpeed</iconPath>
+    <displayCategory>Movement</displayCategory>
+    <displayOrderInCategory>501</displayOrderInCategory>
+    <conditionalStatAffecters>
+      <li Class="ConditionalStatAffecter_Clothed">
+        <statOffsets>
+          <MoveSpeed>0.1</MoveSpeed>
+        </statOffsets>
+      </li>
+      <li Class="ConditionalStatAffecter_Unclothed">
+        <statOffsets>
+          <MoveSpeed>-0.2</MoveSpeed>
+        </statOffsets>
+      </li>
+    </conditionalStatAffecters>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <exclusionTags>
+      <li>VREH_Speed</li>
+    </exclusionTags>
+  </GeneDef>
+
+</Defs>
