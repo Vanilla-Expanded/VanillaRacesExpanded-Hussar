@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!-- Aptitudes -->
+  <!-- It seems like aptitudes work exclusively for skills so these might require C# -->
+  <GeneTemplateDef Name="VREH_GeneAccuracyAptitudeBase" Abstract="True">
+    <geneClass>Gene</geneClass>
+    <ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+    <exclusionTagPrefix>WeaponAptitude</exclusionTagPrefix>
+    <geneTemplateType>Skill</geneTemplateType> <!-- Should probably be replaced by something custom, will leave it as it is for now -->
+    <displayCategory>Aptitudes</displayCategory>
+    <selectionWeight>0.2</selectionWeight>
+  </GeneTemplateDef>
+
+  <GeneTemplateDef ParentName="VREH_GeneAccuracyAptitudeBase">
+    <defName>VREH_WeaponAptitudeTerrible</defName>
+    <label>awful {0}</label>
+    <description>The carrier's aptitude in {0} is greatly reduced. Aptitude acts like an offset on hit chance and accuracy.</description>
+    <iconPath>UI/Icons/Genes/Skills/{0}/Terrible</iconPath>
+    <aptitudeOffset>-8</aptitudeOffset>
+    <displayOrderOffset>0</displayOrderOffset>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>3</biostatMet>
+  </GeneTemplateDef>
+
+  <GeneTemplateDef ParentName="VREH_GeneAccuracyAptitudeBase">
+    <defName>VREH_WeaponAptitudePoor</defName>
+    <label>poor {0}</label>
+    <description>The carrier's aptitude in {0} is reduced. Aptitude acts like an offset on hit chance and accuracy.</description>
+    <iconPath>UI/Icons/Genes/Skills/{0}/Poor</iconPath>
+    <aptitudeOffset>-4</aptitudeOffset>
+    <displayOrderOffset>10</displayOrderOffset>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>2</biostatMet>
+  </GeneTemplateDef>
+
+  <GeneTemplateDef ParentName="VREH_GeneAccuracyAptitudeBase">
+    <defName>VREH_WeaponAptitudeStrong</defName>
+    <label>strong {0}</label>
+    <description>The carrier's aptitude in {0} is increased. Aptitude acts like an offset on hit chance and accuracy.</description>
+    <iconPath>UI/Icons/Genes/Skills/{0}/Strong</iconPath>
+    <aptitudeOffset>4</aptitudeOffset>
+    <displayOrderOffset>20</displayOrderOffset>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-1</biostatMet>
+  </GeneTemplateDef>
+
+  <GeneTemplateDef ParentName="VREH_GeneAccuracyAptitudeBase">
+    <defName>VREH_WeaponAptitudeRemarkable</defName>
+    <label>great {0}</label>
+    <description>The carrier's aptitude in {0} is greatly increased. Aptitude acts like an offset on hit chance and accuracy.</description>
+    <iconPath>UI/Icons/Genes/Skills/{0}/Remarkable</iconPath>
+    <aptitudeOffset>8</aptitudeOffset>
+    <displayOrderOffset>30</displayOrderOffset>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-3</biostatMet>
+  </GeneTemplateDef>
+
+</Defs>
