@@ -26,7 +26,7 @@
     <label>bulletproof skin</label>
     <description>Carriers of this gene have their skin reinforced by organic kevlar-like strands, allowing them to deflect smaller calliber bullets and only end up with bruises.</description>
     <iconPath>UI/GeneIcons/Gene_BulletproofSkin</iconPath>
-    <biostatMet>-1</biostatMet>
+    <biostatMet>-2</biostatMet>
     <displayCategory>Miscellaneous</displayCategory>
     <displayOrderInCategory>11</displayOrderInCategory>
     <symbolPack>
@@ -75,30 +75,89 @@
       </prefixSymbols>
     </symbolPack>
   </GeneDef>
+  
+  <GeneDef>
+    <defName>VREH_Arrogant</defName>
+    <label>arrogant</label>
+    <description>Carriers of this gene do not have a filter and always say what’s on their mind, even if it rubs the others the wrong way.</description>
+    <iconPath>UI/GeneIcons/Gene_Arrogant</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>552</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>2</biostatMet>
+    <forcedTraits>
+      <li>
+        <def>Abrasive</def>
+      </li>
+    </forcedTraits>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>arrogant</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>rude</symbol></li>
+		<li><symbol>evil</symbol></li>
+		<li><symbol>mean</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
 
   <GeneDef>
-    <defName>VREH_ClothedSpeed</defName>
-    <label>clothed speed</label>
-    <description>Carriers of this gene move faster while clothed, and slower while naked.</description>
+    <defName>VREH_Unconstrained</defName>
+    <label>unconstrained</label>
+    <description>Carriers of this gene do not suffer movement speed penalties caused by wearing clothing that would normally slow them down.</description>
     <iconPath>UI/GeneIcons/Gene_ClothedSpeed</iconPath>
     <displayCategory>Movement</displayCategory>
     <displayOrderInCategory>501</displayOrderInCategory>
-    <conditionalStatAffecters>
-      <li Class="ConditionalStatAffecter_Clothed">
-        <statOffsets>
-          <MoveSpeed>0.1</MoveSpeed>
-        </statOffsets>
-      </li>
-      <li Class="ConditionalStatAffecter_Unclothed">
-        <statOffsets>
-          <MoveSpeed>-0.2</MoveSpeed>
-        </statOffsets>
-      </li>
-    </conditionalStatAffecters>
     <biostatCpx>1</biostatCpx>
-    <biostatMet>1</biostatMet>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
+  <GeneDef>
+    <defName>VREH_ChemicalDependency_Luciferium</defName>
+    <label>luciferium dependency</label>
+    <description>Carriers of this gene need to ingest Luciferium on a regular basis to survive. After 6 days without luciferium, carriers will suffer from luciferium deficiency. After 10 days, they will fall into a coma. After 15 days, they will die.</description>
+    <geneClass>Gene_ChemicalDependency</geneClass>
+    <labelShortAdj>luciferium-dependent</labelShortAdj>
+    <iconPath>UI/GeneIcons/Gene_LuciferiumDependency</iconPath>
+    <addictionChanceFactor>0</addictionChanceFactor>
+    <displayOrderOffset>30</displayOrderOffset>
+    <minAgeActive>13</minAgeActive>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>6</biostatMet>
+	<biostatArc>1</biostatArc>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>luci</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>ferium</symbol></li>
+		<li><symbol>devil</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>VREH_Glidewings</defName>
+    <label>glidewings</label>
+    <description>Carriers of this gene grow a small set of wings from their shoulderblades. They are not capable of flight, but they will not be slowed down by any obstacles.</description>
+    <iconPath>UI/GeneIcons/Gene_WingsGlider</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <graphicData>
+      <graphicPath>Pawn/Gliderwings/Gliderwings</graphicPath>
+      <colorType>Skin</colorType>
+      <drawOffsetNorth>(0.1, 0.2, -0.25)</drawOffsetNorth>
+      <drawOffsetSouth>(-0.1, -0.1, -0.25)</drawOffsetSouth>
+      <drawOffsetEast>(-0.5, -0.1, -0.15)</drawOffsetEast>
+	  <drawLoc>Tailbone</drawLoc>
+    </graphicData>
+    <displayCategory>Miscellaneous</displayCategory>
+    <randomChosen>false</randomChosen>
     <exclusionTags>
-      <li>VREH_Speed</li>
+      <li>Tail</li>
     </exclusionTags>
   </GeneDef>
 
