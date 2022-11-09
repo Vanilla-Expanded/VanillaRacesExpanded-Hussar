@@ -121,7 +121,7 @@
     <labelShortAdj>luciferium-dependent</labelShortAdj>
     <iconPath>UI/GeneIcons/Gene_LuciferiumDependency</iconPath>
     <addictionChanceFactor>0</addictionChanceFactor>
-    <displayOrderOffset>30</displayOrderOffset>
+    <displayOrderInCategory>31</displayOrderInCategory>
     <minAgeActive>13</minAgeActive>
     <biostatCpx>1</biostatCpx>
     <biostatMet>6</biostatMet>
