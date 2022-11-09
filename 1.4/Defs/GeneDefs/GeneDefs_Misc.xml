@@ -106,7 +106,7 @@
     <defName>VREH_Unconstrained</defName>
     <label>unconstrained</label>
     <description>Carriers of this gene do not suffer movement speed penalties caused by wearing clothing that would normally slow them down.</description>
-    <iconPath>UI/GeneIcons/Gene_ClothedSpeed</iconPath>
+    <iconPath>UI/GeneIcons/Gene_Unconstrained</iconPath>
     <displayCategory>Movement</displayCategory>
     <displayOrderInCategory>501</displayOrderInCategory>
     <biostatCpx>1</biostatCpx>
