@@ -7,5 +7,7 @@ namespace VREHussars
     public static class VREH_DefOf
     {
         public static GeneDef VREH_BulletproofSkin;
+        public static GeneDef VREH_Giant;
+        public static GeneDef VREH_Unconstrained;
     }
 }

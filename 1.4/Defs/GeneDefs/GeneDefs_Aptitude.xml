@@ -2,12 +2,10 @@
 <Defs>
   
   <!-- Aptitudes -->
-  <!-- It seems like aptitudes work exclusively for skills so these might require C# -->
   <GeneTemplateDef Name="VREH_GeneAccuracyAptitudeBase" Abstract="True">
     <geneClass>Gene</geneClass>
     <ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
     <exclusionTagPrefix>WeaponAptitude</exclusionTagPrefix>
-    <geneTemplateType>Skill</geneTemplateType> <!-- Should probably be replaced by something custom, will leave it as it is for now -->
     <displayCategory>Aptitudes</displayCategory>
     <selectionWeight>0.2</selectionWeight>
   </GeneTemplateDef>

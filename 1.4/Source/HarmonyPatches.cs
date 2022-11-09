@@ -1,7 +1,9 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using Verse;
 using Verse.AI;
 
@@ -113,6 +115,54 @@ namespace VREHussars
             {
                 damageDef = DamageDefOf.Blunt;
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(BodyPartDef), "GetMaxHealth")]
+    public class GetMaxHealth_Patch
+    {
+        [HarmonyPriority(Priority.Last)]
+        private static void Postfix(BodyPartDef __instance, Pawn pawn, ref float __result)
+        {
+            if (pawn.genes != null && pawn.genes.HasGene(VREH_DefOf.VREH_Giant))
+            {
+                __result *= 1.2f;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(StatWorker), "StatOffsetFromGear")]
+    public static class StatWorker_StatOffsetFromGear_Patch
+    {
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> codeInstructions)
+        {
+            bool patched = false;
+            var codes = codeInstructions.ToList();
+            for (var i = 0; i < codes.Count; i++)
+            {
+                var code = codes[i];
+                yield return code;
+                if (!patched && code.opcode == OpCodes.Stloc_0)
+                {
+                    yield return new CodeInstruction(OpCodes.Ldloc_0);
+                    yield return new CodeInstruction(OpCodes.Ldarg_0);
+                    yield return new CodeInstruction(OpCodes.Ldarg_1);
+                    yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(StatWorker_StatOffsetFromGear_Patch),
+                        nameof(ChangeValueIfNeeded)));
+                    yield return new CodeInstruction(OpCodes.Stloc_0);
+                    patched = true;
+                }
+            }
+        }
+
+        public static float ChangeValueIfNeeded(float val, Thing gear, StatDef stat)
+        {
+            if (stat == StatDefOf.MoveSpeed && val < 0 && gear.ParentHolder is Pawn_ApparelTracker apparelTracker 
+                && apparelTracker.pawn.genes != null && apparelTracker.pawn.genes.HasGene(VREH_DefOf.VREH_Unconstrained))
+            {
+                return 0f;
+            }
+            return val;
         }
     }
 }
