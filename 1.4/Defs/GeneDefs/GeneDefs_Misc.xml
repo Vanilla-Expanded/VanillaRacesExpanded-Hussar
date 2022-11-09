@@ -5,6 +5,7 @@
     <defName>VREH_Dutiful</defName>
     <label>dutiful</label>
     <description>Carriers of this gene have a greatly increased sense of duty and will never break down when drafted.</description>
+    <geneClass>VREHussars.Gene_Dutiful</geneClass>
     <iconPath>UI/GeneIcons/Gene_Dutiful</iconPath>
     <biostatMet>-1</biostatMet>
     <displayCategory>Miscellaneous</displayCategory>
@@ -159,6 +160,11 @@
     <exclusionTags>
       <li>Tail</li>
     </exclusionTags>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<hediffToWholeBody>VREH_Glidewings</hediffToWholeBody>
+			</li>
+		</modExtensions>
   </GeneDef>
 
 </Defs>
