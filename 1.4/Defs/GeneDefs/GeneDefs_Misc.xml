@@ -51,6 +51,12 @@
     <biostatMet>0</biostatMet>
     <displayCategory>Miscellaneous</displayCategory>
     <displayOrderInCategory>12</displayOrderInCategory>
+	<modExtensions>
+		<li Class="VanillaGenesExpanded.GeneExtension">
+			<bodyScaleFactor>(1.1, 1.1)</bodyScaleFactor>
+			<headScaleFactor>(1.1, 1.1)</headScaleFactor>
+		</li>
+	</modExtensions>
   </GeneDef>
   
   <GeneDef>
