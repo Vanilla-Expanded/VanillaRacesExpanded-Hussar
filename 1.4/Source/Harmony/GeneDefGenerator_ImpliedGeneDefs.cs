@@ -29,7 +29,7 @@ namespace VREHussars
             {
                 Log.Message("detected "+template.defName);
 
-                List<ThingDef> listOfWeapons = DefDatabase<ThingDef>.AllDefs.Where(element => (element.weaponTags?.Count > 0)).ToList();
+                List<ThingDef> listOfWeapons = DefDatabase<ThingDef>.AllDefs.Where(element => (element.weaponTags?.Count > 0 && element.destroyOnDrop==false && element.hasInteractionCell==false&&element.building==null)).ToList();
 
                 foreach (ThingDef weapon in listOfWeapons)
                 {
