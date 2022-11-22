@@ -9,10 +9,12 @@ using Verse.AI;
 
 namespace VREHussars
 {
-    [StaticConstructorOnStartup]
-    public static class HarmonyPatches
+    
+
+
+    public class VREHussarsMod : Mod
     {
-        static HarmonyPatches()
+        public VREHussarsMod(ModContentPack content) : base(content)
         {
             new Harmony("VREHussars.Mod").PatchAll();
         }

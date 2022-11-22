@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+
+  <VREHussars.WeaponGeneTemplateDef Name="VREH_GeneAptitudeBase" Abstract="True">
+    <geneClass>Gene</geneClass>
+    <ignoreIllegalLabelCharacterConfigError>true</ignoreIllegalLabelCharacterConfigError>
+    <exclusionTagPrefix>VREH_WeaponAptitude</exclusionTagPrefix> 
+    <displayCategory>VREH_WeaponAptitudes</displayCategory>
+    <selectionWeight>0.2</selectionWeight>
+  </VREHussars.WeaponGeneTemplateDef>
+
+  <VREHussars.WeaponGeneTemplateDef ParentName="VREH_GeneAptitudeBase">
+    <defName>VREH_WeaponAptitude</defName>
+    <label>aptitude for {0}</label>
+    <description>todo</description>
+    <iconPath>UI/Icons/Genes/Gene_TotalPollutionResistance</iconPath>
+    <displayOrderOffset>0</displayOrderOffset>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>2</biostatMet>
+  </VREHussars.WeaponGeneTemplateDef>
+
+ 
+
+</Defs>
