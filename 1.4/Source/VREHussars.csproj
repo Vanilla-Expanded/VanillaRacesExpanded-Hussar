@@ -62,12 +62,19 @@
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConditionalStatAffecters\ConditionalStatAffecter_WeaponProficiency.cs" />
+    <Compile Include="DefModExtensions\WeaponGeneExtension.cs" />
+    <Compile Include="Defs\BlackListedWeaponsDef.cs" />
     <Compile Include="Defs\WeaponGeneTemplateDef.cs" />
     <Compile Include="Genes\Gene_Dutiful.cs" />
+    <Compile Include="Genes\Gene_RandomWeapon.cs" />
+    <Compile Include="Genes\Gene_Weapon.cs" />
     <Compile Include="Harmony\GeneDefGenerator_ImpliedGeneDefs.cs" />
+    <Compile Include="Harmony\Gene_OverrideBy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Harmony\HarmonyPatches.cs" />
     <Compile Include="DefOfs\VREH_DefOf.cs" />
+    <Compile Include="StaticCollectionsClass\StaticCollectionsClass.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

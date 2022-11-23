@@ -8,6 +8,7 @@ using RimWorld;
 using System.Reflection;
 using System.Reflection.Emit;
 using HarmonyLib;
+using static RimWorld.BaseGen.SymbolStack;
 
 namespace VREHussars
 {
@@ -25,17 +26,29 @@ namespace VREHussars
         {
             List<GeneDef> resultingList = values.ToList();
 
+
+            List<string> blackListedWeapons = new List<string>();
+            List<BlackListedWeaponsDef> allBlackListedWeapons = DefDatabase<BlackListedWeaponsDef>.AllDefsListForReading;
+            foreach (BlackListedWeaponsDef individualList in allBlackListedWeapons)
+            {
+                blackListedWeapons.AddRange(individualList.blackListedWeapons);
+            }
+
+
+
             foreach (WeaponGeneTemplateDef template in DefDatabase<WeaponGeneTemplateDef>.AllDefs)
             {
-                Log.Message("detected "+template.defName);
-
-                List<ThingDef> listOfWeapons = DefDatabase<ThingDef>.AllDefs.Where(element => (element.weaponTags?.Count > 0 && element.destroyOnDrop==false && element.hasInteractionCell==false&&element.building==null)).ToList();
+              
+                List<ThingDef> listOfWeapons = DefDatabase<ThingDef>.AllDefs.Where(element => (element.weaponTags?.Count > 0 && 
+                element.destroyOnDrop==false && element.hasInteractionCell==false&&element.building==null&&
+                !element.HasComp(typeof(CompExplosive))&& element.HasComp(typeof(CompQuality))&&element.recipeMaker!=null &&
+                !blackListedWeapons.Contains(element.defName))).ToList();
 
                 foreach (ThingDef weapon in listOfWeapons)
                 {
                     resultingList.Add(GetFromTemplate(template, weapon, weapon.index * 1000));
                 }
-
+               
 
             }
 
@@ -56,7 +69,7 @@ namespace VREHussars
                 geneClass = template.geneClass,
                 label = template.label.Formatted(def.label),
                 iconPath = def.graphicData.texPath,
-                //description = ResolveDescription(),
+                description = template.description.Formatted(def.LabelCap),
                 labelShortAdj = template.labelShortAdj.Formatted(def.label),
                 selectionWeight = template.selectionWeight,
                 biostatCpx = template.biostatCpx,
@@ -64,16 +77,33 @@ namespace VREHussars
                 displayCategory = template.displayCategory,
                 displayOrderInCategory = displayOrderBase + template.displayOrderOffset,
                 minAgeActive = template.minAgeActive,
-                modContentPack = template.modContentPack
+                modContentPack = template.modContentPack,
+                modExtensions = new List<DefModExtension> { 
+                    new WeaponGeneExtension { 
+                        weapon = def
+                    } 
+                },
+                conditionalStatAffecters = new List<ConditionalStatAffecter> { 
+                    new ConditionalStatAffecter_WeaponProficiency {statFactors= new List<StatModifier>
+                        {
+                            new StatModifier{stat=StatDefOf.ShootingAccuracyPawn,value=1.5f},
+                            new StatModifier{stat=StatDefOf.MeleeHitChance,value=1.5f}
+                        }
+                    } 
+                }
             };
+
+           
             if (!template.exclusionTagPrefix.NullOrEmpty())
             {
-                geneDef.exclusionTags = new List<string> { template.exclusionTagPrefix + "_" + def.defName };
+                geneDef.exclusionTags = new List<string> { template.exclusionTagPrefix};
             }
 
             return geneDef;
 
         }
+
+       
 
 
 

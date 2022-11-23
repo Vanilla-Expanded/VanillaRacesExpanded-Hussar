@@ -12,7 +12,7 @@ namespace VREHussars
 
         public Type geneClass = typeof(Gene);
 
-        public int biostatCpx;
+        public int biostatCpx;     
 
         public int biostatMet;
 

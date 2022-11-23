@@ -38,6 +38,7 @@
 	  <li>VREH_Arrogant</li>
 	  <!--<li>VREH_WeaponAptitudeRemarkable</li> -->
 	  <li>VREH_Unconstrained</li>
+	  <li>VREHT_WeaponAptitude_Randomizer</li>
     </genes>
   </XenotypeDef>
 
