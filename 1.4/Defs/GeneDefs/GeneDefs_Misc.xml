@@ -38,6 +38,11 @@
 		<description>Carriers of this gene have their skin reinforced by organic kevlar-like strands, allowing them to deflect smaller calliber bullets and only end up with bruises.</description>
 		<iconPath>UI/GeneIcons/Gene_BulletproofSkin</iconPath>
 		<biostatMet>-2</biostatMet>
+		<exclusionTags>
+			<li>AG_Armour</li>
+			<li>Armour</li>
+			<li>Armor</li>
+		</exclusionTags>
 		<displayCategory>Miscellaneous</displayCategory>
 		<displayOrderInCategory>11</displayOrderInCategory>
 		<symbolPack>
