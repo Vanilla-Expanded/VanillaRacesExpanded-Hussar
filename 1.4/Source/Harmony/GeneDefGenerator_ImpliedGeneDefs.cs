@@ -41,7 +41,7 @@ namespace VREHussars
               
                 List<ThingDef> listOfWeapons = DefDatabase<ThingDef>.AllDefs.Where(element => (element.weaponTags?.Count > 0 && 
                 element.destroyOnDrop==false && element.hasInteractionCell==false&&element.building==null&&
-                !element.HasComp(typeof(CompExplosive))&& element.HasComp(typeof(CompQuality))&&element.recipeMaker!=null &&
+                !element.HasComp(typeof(CompExplosive))&& element.HasComp(typeof(CompQuality))&&element.recipeMaker?.workSkill!=null &&
                 !blackListedWeapons.Contains(element.defName))).ToList();
 
                 foreach (ThingDef weapon in listOfWeapons)
