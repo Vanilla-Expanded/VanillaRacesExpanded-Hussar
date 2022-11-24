@@ -47,7 +47,7 @@
     <defName>VREH_Giant</defName>
     <label>giant</label>
     <description>Carriers of this gene are slightly larger than baseline humans.</description>
-    <iconPath>UI/GeneIcons/Gene_BulletproofSkin</iconPath>
+    <iconPath>UI/GeneIcons/Gene_Giant</iconPath>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-3</biostatMet>
     <displayCategory>Miscellaneous</displayCategory>
