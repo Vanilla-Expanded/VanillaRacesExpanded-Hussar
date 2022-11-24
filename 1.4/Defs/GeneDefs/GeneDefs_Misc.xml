@@ -48,7 +48,8 @@
     <label>giant</label>
     <description>Carriers of this gene are slightly larger than baseline humans.</description>
     <iconPath>UI/GeneIcons/Gene_BulletproofSkin</iconPath>
-    <biostatMet>0</biostatMet>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-3</biostatMet>
     <displayCategory>Miscellaneous</displayCategory>
     <displayOrderInCategory>12</displayOrderInCategory>
 	<modExtensions>
