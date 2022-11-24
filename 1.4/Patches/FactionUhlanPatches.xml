@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName="PirateWaster"]/xenotypeSet/xenotypeChances</xpath>
+		<value>
+			<VREH_Uhlan>0.02</VREH_Uhlan>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
+		<value>
+			<VREH_Uhlan>0.01</VREH_Uhlan>
+		</value>
+	</Operation>
+
+</Patch>
