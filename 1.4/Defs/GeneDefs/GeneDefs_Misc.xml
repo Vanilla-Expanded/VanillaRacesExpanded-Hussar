@@ -163,6 +163,8 @@
 		<geneClass>Gene_ChemicalDependency</geneClass>
 		<labelShortAdj>luciferium-dependent</labelShortAdj>
 		<iconPath>UI/GeneIcons/Gene_LuciferiumDependency</iconPath>
+		<chemical>Luciferium</chemical>
+		
 		<addictionChanceFactor>0</addictionChanceFactor>
 		<displayOrderInCategory>31</displayOrderInCategory>
 		<minAgeActive>13</minAgeActive>
@@ -197,15 +199,18 @@
 		<graphicData>
 			<graphicPath>Pawn/Gliderwings/Gliderwings</graphicPath>
 			<colorType>Skin</colorType>
-			<drawOffsetNorth>(0.1, 0.2, -0.25)</drawOffsetNorth>
-			<drawOffsetSouth>(-0.1, -0.1, -0.25)</drawOffsetSouth>
-			<drawOffsetEast>(-0.5, -0.1, -0.15)</drawOffsetEast>
+			<drawScale>0.75</drawScale>
+			<drawOffsetNorth>(0, 0.2, 0)</drawOffsetNorth>
+			<drawOffsetSouth>(0, -0.1, 0)</drawOffsetSouth>
+			<drawOffsetEast>(-0.4, 0, 0)</drawOffsetEast>
 			<drawLoc>Tailbone</drawLoc>
 		</graphicData>
 		<displayCategory>Miscellaneous</displayCategory>
 		<randomChosen>false</randomChosen>
 		<exclusionTags>
-			<li>Tail</li>
+			
+			<li>Wing</li>
+			<li>Wings</li>
 		</exclusionTags>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
