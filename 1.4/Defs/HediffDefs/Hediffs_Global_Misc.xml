@@ -3,8 +3,8 @@
 
 	<HediffDef>
 		<defName>VREH_Glidewings</defName>
-		<label>text.todo</label>
-		<description>text.todo</description>
+		<label>glidewings</label>
+		<description>A small set of wings growing from this person's shoulderblades. They are not capable of flight, but they will not be slowed down by any obstacles.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
