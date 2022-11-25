@@ -44,7 +44,7 @@
 			</li>
 			<li>
 				<overrideLabel>deficiency coma</overrideLabel>
-				<minSeverity>2.5</minSeverity>
+				<minSeverity>2</minSeverity>
 				<lifeThreatening>true</lifeThreatening>
 				<capMods>
 					<li>

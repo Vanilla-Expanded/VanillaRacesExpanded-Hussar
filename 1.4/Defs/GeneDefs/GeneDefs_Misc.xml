@@ -159,7 +159,7 @@
 	<GeneDef>
 		<defName>VREH_ChemicalDependency_Luciferium</defName>
 		<label>luciferium dependency</label>
-		<description>Carriers of this gene need to ingest Luciferium on a regular basis to survive. After 10 days without luciferium, carriers will suffer from luciferium deficiency. After 25 days, they will fall into a coma. After 30 days, they will die.</description>
+		<description>Carriers of this gene need to ingest Luciferium on a regular basis to survive. After 10 days without luciferium, carriers will suffer from luciferium deficiency. After 20 days, they will fall into a coma. After 30 days, they will die.</description>
 		<geneClass>VREHussars.Gene_ChemicalDependencyLuci</geneClass>
 		<labelShortAdj>luciferium-dependent</labelShortAdj>
 		<iconPath>UI/GeneIcons/Gene_LuciferiumDependency</iconPath>
