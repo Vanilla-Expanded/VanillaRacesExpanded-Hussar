@@ -66,6 +66,7 @@
     <Compile Include="DefModExtensions\WeaponGeneExtension.cs" />
     <Compile Include="Defs\BlackListedWeaponsDef.cs" />
     <Compile Include="Defs\WeaponGeneTemplateDef.cs" />
+    <Compile Include="Genes\Gene_ChemicalDependencyLuci.cs" />
     <Compile Include="Genes\Gene_Dutiful.cs" />
     <Compile Include="Genes\Gene_RandomWeapon.cs" />
     <Compile Include="Genes\Gene_Weapon.cs" />
