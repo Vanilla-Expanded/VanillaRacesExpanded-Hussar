@@ -72,7 +72,7 @@
 		<exclusionTags>
 			<li>AG_BodySize</li>
 		</exclusionTags>
-		<biostatMet>-3</biostatMet>
+		<biostatMet>-2</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<displayOrderInCategory>12</displayOrderInCategory>
 		<modExtensions>
@@ -90,7 +90,7 @@
 		<displayCategory>Miscellaneous</displayCategory>
 		<displayOrderInCategory>551</displayOrderInCategory>
 		<biostatCpx>1</biostatCpx>
-		<biostatMet>-1</biostatMet>
+		<biostatMet>-3</biostatMet>
 		<forcedTraits>
 			<li>
 				<def>Tough</def>
@@ -169,7 +169,7 @@
 		<displayOrderInCategory>31</displayOrderInCategory>
 		<minAgeActive>13</minAgeActive>
 		<biostatCpx>1</biostatCpx>
-		<biostatMet>6</biostatMet>
+		<biostatMet>8</biostatMet>
 		<biostatArc>1</biostatArc>
 		<symbolPack>
 			<prefixSymbols>
