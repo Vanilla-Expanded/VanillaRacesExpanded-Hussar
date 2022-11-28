@@ -16,7 +16,7 @@ namespace VREHussars
             {
                 return;
             }
-            base.PostAdd();
+           
             if (def.chemical.addictionHediff != null)
             {
                 Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(def.chemical.addictionHediff);
