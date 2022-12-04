@@ -22,7 +22,8 @@ namespace VREHussars
                 if (pawn.equipment != null && pawn.equipment.Primary != null)
                 {
                     ThingDef weapon = pawn.equipment.Primary.def;
-                    if (StaticCollectionsClass.weaponproficiency_gene_pawns[pawn] == weapon)
+                    if (StaticCollectionsClass.weaponproficiency_gene_pawns.ContainsKey(pawn)&&
+                        StaticCollectionsClass.weaponproficiency_gene_pawns[pawn] == weapon)
                     {
                         return true;
                     }
