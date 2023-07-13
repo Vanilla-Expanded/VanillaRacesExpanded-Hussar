@@ -18,7 +18,7 @@
 		<defName>VREH_GeneticDrugNeed_Luci</defName>
 		<label>chemical dependency</label>
 		<description>This person has a genetically-induced biochemical dependency on a specific drug. Without regular doses of the drug, their body cannot maintain itself in a healthy state and they will suffer degrading health and mood until they die.\n\nTakes effect after age: 13.</description>
-		<hediffClass>Hediff_ChemicalDependency</hediffClass>
+		<hediffClass>VREHussars.Hediff_ChemicalDependency_Luci</hediffClass>
 		<everCurableByItem>false</everCurableByItem>
 		<initialSeverity>0.001</initialSeverity>
 		<stages>
