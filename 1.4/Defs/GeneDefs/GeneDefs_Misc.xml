@@ -164,7 +164,7 @@
 		<labelShortAdj>luciferium-dependent</labelShortAdj>
 		<iconPath>UI/GeneIcons/Gene_LuciferiumDependency</iconPath>
 		<chemical>Luciferium</chemical>
-		
+		<displayCategory>Archite</displayCategory>
 		<addictionChanceFactor>0</addictionChanceFactor>
 		<displayOrderInCategory>31</displayOrderInCategory>
 		<minAgeActive>13</minAgeActive>
