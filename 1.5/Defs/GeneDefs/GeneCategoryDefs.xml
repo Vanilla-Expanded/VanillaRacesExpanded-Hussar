@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+  <GeneCategoryDef>
+    <defName>VREH_WeaponAptitudes</defName>
+    <label>weapon aptitudes</label>
+    <displayPriorityInXenotype>201</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  
+
+</Defs>

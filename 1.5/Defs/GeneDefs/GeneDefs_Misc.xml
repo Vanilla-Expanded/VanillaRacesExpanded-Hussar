@@ -1,0 +1,234 @@
+<?xml version="1.0" ?>
+<Defs>
+	<GeneDef>
+		<defName>VREH_Dutiful</defName>
+		<label>dutiful</label>
+		<description>Carriers of this gene have a greatly increased sense of duty and will never break down when drafted.</description>
+		<geneClass>VREHussars.Gene_Dutiful</geneClass>
+		<iconPath>UI/GeneIcons/Gene_Dutiful</iconPath>
+		<biostatMet>-1</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>10</displayOrderInCategory>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>obedient</symbol>
+				</li>
+				<li>
+					<symbol>loyal</symbol>
+				</li>
+				<li>
+					<symbol>dutiful</symbol>
+				</li>
+				<li>
+					<symbol>steadfast</symbol>
+				</li>
+				<li>
+					<symbol>steady</symbol>
+				</li>
+				<li>
+					<symbol>composed</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+	</GeneDef>
+	<GeneDef>
+		<defName>VREH_BulletproofSkin</defName>
+		<label>bulletproof skin</label>
+		<description>Carriers of this gene have their skin reinforced by organic kevlar-like strands, allowing them to deflect smaller calliber bullets and only end up with bruises.</description>
+		<iconPath>UI/GeneIcons/Gene_BulletproofSkin</iconPath>
+		<biostatMet>-2</biostatMet>
+		<exclusionTags>
+			<li>AG_Armour</li>
+			<li>Armour</li>
+			<li>Armor</li>
+		</exclusionTags>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>11</displayOrderInCategory>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li>
+					<symbol>bulletproof</symbol>
+				</li>
+			</wholeNameSymbols>
+			<prefixSymbols>
+				<li>
+					<symbol>kevlar</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>resistant</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+	<GeneDef>
+		<defName>VREH_Giant</defName>
+		<label>giant</label>
+		<description>Carriers of this gene are slightly larger than baseline humans.</description>
+		<iconPath>UI/GeneIcons/Gene_Giant</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<exclusionTags>
+			<li>AG_BodySize</li>
+		</exclusionTags>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>12</displayOrderInCategory>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<bodyScaleFactor>(1.1, 1.1)</bodyScaleFactor>
+				<headScaleFactor>(1.1, 1.1)</headScaleFactor>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>VREH_Toughness</defName>
+		<label>toughness</label>
+		<description>Carriers of this gene have thick skin, dense flesh, and durable bones, and take much less damage than other people from the same blows.</description>
+		<iconPath>UI/GeneIcons/Gene_Toughness</iconPath>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>551</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-3</biostatMet>
+		<forcedTraits>
+			<li>
+				<def>Tough</def>
+			</li>
+		</forcedTraits>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>hard</symbol>
+				</li>
+				<li>
+					<symbol>tough</symbol>
+				</li>
+				<li>
+					<symbol>heavy</symbol>
+				</li>
+				<li>
+					<symbol>strong</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+	</GeneDef>
+	<GeneDef>
+		<defName>VREH_Arrogant</defName>
+		<label>arrogant</label>
+		<description>Carriers of this gene do not have a filter and always say what’s on their mind, even if it rubs the others the wrong way.</description>
+		<iconPath>UI/GeneIcons/Gene_Arrogant</iconPath>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>552</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>2</biostatMet>
+		<forcedTraits>
+			<li>
+				<def>Abrasive</def>
+			</li>
+		</forcedTraits>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li>
+					<symbol>arrogant</symbol>
+				</li>
+			</wholeNameSymbols>
+			<prefixSymbols>
+				<li>
+					<symbol>rude</symbol>
+				</li>
+				<li>
+					<symbol>evil</symbol>
+				</li>
+				<li>
+					<symbol>mean</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+	</GeneDef>
+	<GeneDef>
+		<defName>VREH_Unconstrained</defName>
+		<label>unconstrained</label>
+		<description>Carriers of this gene do not suffer movement speed penalties caused by wearing clothing that would normally slow them down.</description>
+		<iconPath>UI/GeneIcons/Gene_Unconstrained</iconPath>
+		<displayCategory>Movement</displayCategory>
+		<displayOrderInCategory>501</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+	</GeneDef>
+	<GeneDef>
+		<defName>VREH_ChemicalDependency_Luciferium</defName>
+		<label>luciferium dependency</label>
+		<description>Carriers of this gene need to ingest Luciferium on a regular basis to survive. After 10 days without luciferium, carriers will suffer from luciferium deficiency. After 20 days, they will fall into a coma. After 30 days, they will die.</description>
+		<geneClass>VREHussars.Gene_ChemicalDependencyLuci</geneClass>
+		<labelShortAdj>luciferium-dependent</labelShortAdj>
+		<iconPath>UI/GeneIcons/Gene_LuciferiumDependency</iconPath>
+		<chemical>Luciferium</chemical>
+		<displayCategory>Archite</displayCategory>
+		<addictionChanceFactor>0</addictionChanceFactor>
+		<displayOrderInCategory>31</displayOrderInCategory>
+		<minAgeActive>13</minAgeActive>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>8</biostatMet>
+		<biostatArc>1</biostatArc>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>luci</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>ferium</symbol>
+				</li>
+				<li>
+					<symbol>devil</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+	<GeneDef>
+		<defName>VREH_Glidewings</defName>
+		<label>glidewings</label>
+		<description>Carriers of this gene grow a small set of wings from their shoulderblades. They are not capable of flight, but they will not be slowed down by any obstacles.</description>
+		<iconPath>UI/GeneIcons/Gene_WingsGlider</iconPath>
+		<iconColor>(0.75, 0.75, 0.75)</iconColor>
+		<displayOrderInCategory>1001</displayOrderInCategory>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<randomChosen>false</randomChosen>
+		<exclusionTags>
+			<li>Wing</li>
+			<li>Wings</li>
+		</exclusionTags>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<hediffToWholeBody>VREH_Glidewings</hediffToWholeBody>
+			</li>
+		</modExtensions>
+		<renderNodeProperties Inherit="False">
+			<li>
+				<parentTagDef>Body</parentTagDef>
+				<texPath>Pawn/Gliderwings/Gliderwings</texPath>
+				<drawSize>(0.75,0.75)</drawSize>
+				<colorType>Skin</colorType>
+				<drawData>
+					<defaultData>
+						<layer>10</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>80</layer>
+						<offset>(0, 0, 0)</offset>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0, 0, 0)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.4, 0, 0)</offset>
+					</dataEast>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+</Defs>

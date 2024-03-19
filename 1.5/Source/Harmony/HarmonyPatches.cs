@@ -39,13 +39,13 @@ namespace VREHussars
     [HarmonyPatch(typeof(MentalStateHandler), "TryStartMentalState")]
     public static class MentalStateHandler_TryStartMentalState_Patch
     {
-        public static bool Prefix(ref bool __result, MentalStateHandler __instance, MentalStateDef stateDef, string reason = null, 
+        public static bool Prefix(ref bool __result, Pawn ___pawn,MentalStateHandler __instance, MentalStateDef stateDef, string reason = null, 
             bool forceWake = false, bool causedByMood = false, Pawn otherPawn = null, bool transitionSilently = false, 
             bool causedByDamage = false, bool causedByPsycast = false)
         {
-            if (__instance.pawn.Drafted && __instance.pawn.genes != null)
+            if (___pawn.Drafted && ___pawn.genes != null)
             {
-                var gene = __instance.pawn.genes.GetFirstGeneOfType<Gene_Dutiful>();
+                var gene = ___pawn.genes.GetFirstGeneOfType<Gene_Dutiful>();
                 if (gene != null)
                 {
                     gene.RegisterMentalState(stateDef, reason, causedByMood, otherPawn, transitionSilently, causedByDamage, causedByPsycast);

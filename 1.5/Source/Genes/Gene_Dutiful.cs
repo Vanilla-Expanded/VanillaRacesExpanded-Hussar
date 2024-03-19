@@ -45,7 +45,7 @@ namespace VREHussars
         {
             if (preventedMentalState != null)
             {
-                pawn.mindState.mentalStateHandler.TryStartMentalState(preventedMentalState, reason, false, causedByMood, otherPawn, 
+                pawn.mindState.mentalStateHandler.TryStartMentalState(preventedMentalState, reason, false, causedByMood, false,otherPawn, 
                     transitionSilently, causedByDamage, causedByPsycast);
                 ResetData();
 
