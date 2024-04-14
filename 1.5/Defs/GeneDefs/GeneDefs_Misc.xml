@@ -75,12 +75,9 @@
 		<biostatMet>-2</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<displayOrderInCategory>12</displayOrderInCategory>
-		<modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<bodyScaleFactor>(1.1, 1.1)</bodyScaleFactor>
-				<headScaleFactor>(1.1, 1.1)</headScaleFactor>
-			</li>
-		</modExtensions>
+		<statFactors>
+			<VEF_CosmeticBodySize_Multiplier>1.1</VEF_CosmeticBodySize_Multiplier>
+		</statFactors>
 	</GeneDef>
 	<GeneDef>
 		<defName>VREH_Toughness</defName>
