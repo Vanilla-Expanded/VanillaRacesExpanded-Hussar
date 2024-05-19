@@ -212,10 +212,10 @@
 				<colorType>Skin</colorType>
 				<drawData>
 					<defaultData>
-						<layer>10</layer>
+						<layer>-2</layer>
 					</defaultData>
 					<dataNorth>
-						<layer>80</layer>
+						<layer>90</layer>
 						<offset>(0, 0, 0)</offset>
 					</dataNorth>
 					<dataSouth>
