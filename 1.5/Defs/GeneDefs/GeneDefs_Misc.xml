@@ -76,7 +76,7 @@
 		<displayCategory>Miscellaneous</displayCategory>
 		<displayOrderInCategory>12</displayOrderInCategory>
 		<statFactors>
-			<VEF_CosmeticBodySize_Multiplier>1.1</VEF_CosmeticBodySize_Multiplier>
+			
 			<VEF_BodySize_Multiplier>1.1</VEF_BodySize_Multiplier>
 		</statFactors>
 	</GeneDef>
