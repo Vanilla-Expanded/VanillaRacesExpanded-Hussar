@@ -4,21 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using UnityEngine;
 using Verse;
 using Verse.AI;
 
 namespace VREHussars
 {
-    
 
-
-    public class VREHussarsMod : Mod
-    {
-        public VREHussarsMod(ModContentPack content) : base(content)
-        {
-            new Harmony("VREHussars.Mod").PatchAll();
-        }
-    }
 
     [HarmonyPatch(typeof(Pawn_DraftController), "Drafted", MethodType.Setter)]
     public static class Pawn_DraftController_Drafted_Patch
@@ -96,7 +88,7 @@ namespace VREHussars
     {
         public static void Postfix(Pawn __instance, ref DamageInfo dinfo)
         {
-            if (__instance.genes != null && __instance.genes.HasGene(VREH_DefOf.VREH_BulletproofSkin) &&
+            if (__instance.genes != null && __instance.genes.HasActiveGene(VREH_DefOf.VREH_BulletproofSkin) &&
                 dinfo.Def != DamageDefOf.Blunt && dinfo.Def.armorCategory == DamageArmorCategoryDefOf.Sharp
                 && dinfo.ArmorPenetrationInt < 0.2f)
             {
@@ -111,7 +103,7 @@ namespace VREHussars
     {
         public static void Postfix(Pawn pawn, ref DamageDef damageDef, float armorPenetration)
         {
-            if (pawn.genes != null && pawn.genes.HasGene(VREH_DefOf.VREH_BulletproofSkin) 
+            if (pawn.genes != null && pawn.genes.HasActiveGene(VREH_DefOf.VREH_BulletproofSkin) 
                 && damageDef != DamageDefOf.Blunt && damageDef.armorCategory == DamageArmorCategoryDefOf.Sharp 
                 && armorPenetration < 0.2f)
             {
@@ -126,7 +118,7 @@ namespace VREHussars
         [HarmonyPriority(Priority.Last)]
         private static void Postfix(BodyPartDef __instance, Pawn pawn, ref float __result)
         {
-            if (pawn.genes != null && pawn.genes.HasGene(VREH_DefOf.VREH_Giant))
+            if (pawn.genes != null && pawn.genes.HasActiveGene(VREH_DefOf.VREH_Giant))
             {
                 __result *= 1.2f;
             }
@@ -160,7 +152,7 @@ namespace VREHussars
         public static float ChangeValueIfNeeded(float val, Thing gear, StatDef stat)
         {
             if (stat == StatDefOf.MoveSpeed && val < 0 && gear.ParentHolder is Pawn_ApparelTracker apparelTracker 
-                && apparelTracker.pawn.genes != null && apparelTracker.pawn.genes.HasGene(VREH_DefOf.VREH_Unconstrained))
+                && apparelTracker.pawn.genes != null && apparelTracker.pawn.genes.HasActiveGene(VREH_DefOf.VREH_Unconstrained))
             {
                 return 0f;
             }

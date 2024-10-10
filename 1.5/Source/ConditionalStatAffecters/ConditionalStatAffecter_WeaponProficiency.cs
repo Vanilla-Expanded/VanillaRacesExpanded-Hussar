@@ -14,15 +14,14 @@ namespace VREHussars
             {
                 return false;
             }
-            Pawn pawn;
-            if (req.HasThing && (pawn = req.Thing as Pawn) != null && pawn.RaceProps.Humanlike)
+            if (req.HasThing && req.Thing is Pawn pawn && pawn.RaceProps.Humanlike)
             {
 
-              
+
                 if (pawn.equipment != null && pawn.equipment.Primary != null)
                 {
                     ThingDef weapon = pawn.equipment.Primary.def;
-                    if (StaticCollectionsClass.weaponproficiency_gene_pawns.ContainsKey(pawn)&&
+                    if (StaticCollectionsClass.weaponproficiency_gene_pawns.ContainsKey(pawn) &&
                         StaticCollectionsClass.weaponproficiency_gene_pawns[pawn] == weapon)
                     {
                         return true;
