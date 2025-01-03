@@ -6,6 +6,7 @@
 		<description>A small set of wings growing from this person's shoulderblades. They are not capable of flight, but they will not be slowed down by any obstacles.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
@@ -19,6 +20,7 @@
 		<label>chemical dependency</label>
 		<description>This person has a genetically-induced biochemical dependency on a specific drug. Without regular doses of the drug, their body cannot maintain itself in a healthy state and they will suffer degrading health and mood until they die.\n\nTakes effect after age: 13.</description>
 		<hediffClass>VREHussars.Hediff_ChemicalDependency_Luci</hediffClass>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<everCurableByItem>false</everCurableByItem>
 		<initialSeverity>0.001</initialSeverity>
 		<stages>
