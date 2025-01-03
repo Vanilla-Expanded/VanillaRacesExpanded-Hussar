@@ -25,45 +25,40 @@ namespace VREHussars
         public static IEnumerable<GeneDef> Postfix(IEnumerable<GeneDef> values)
         {
             List<GeneDef> resultingList = values.ToList();
-
-
-            List<string> blackListedWeapons = new List<string>();
+            List<string> blackListedWeapons = new();
             List<BlackListedWeaponsDef> allBlackListedWeapons = DefDatabase<BlackListedWeaponsDef>.AllDefsListForReading;
             foreach (BlackListedWeaponsDef individualList in allBlackListedWeapons)
             {
                 blackListedWeapons.AddRange(individualList.blackListedWeapons);
             }
-
-
-
+            List<ThingDef> listOfWeapons = DefDatabase<ThingDef>.AllDefs.Where(WeaponFilter(blackListedWeapons)).ToList();
             foreach (WeaponGeneTemplateDef template in DefDatabase<WeaponGeneTemplateDef>.AllDefs)
             {
-              
-                List<ThingDef> listOfWeapons = DefDatabase<ThingDef>.AllDefs.Where(element => (element.weaponTags?.Count > 0 && 
-                element.destroyOnDrop==false && element.hasInteractionCell==false&&element.building==null&&
-                !element.HasComp(typeof(CompExplosive))&& element.HasComp(typeof(CompQuality))&&element.recipeMaker?.workSkill!=null &&
-                !blackListedWeapons.Contains(element.defName))).ToList();
-
                 foreach (ThingDef weapon in listOfWeapons)
                 {
                     resultingList.Add(GetFromTemplate(template, weapon, weapon.index * 1000));
                 }
-               
-
             }
-
-
-
             return resultingList;
+        }
 
-
-
-
+        public static Func<ThingDef, bool> WeaponFilter(List<string> blackListedWeapons)
+        {
+            return element => element.weaponTags?.Count > 0 
+                         && element.destroyOnDrop == false 
+                         && element.hasInteractionCell == false 
+                         && element.building == null 
+                         && !element.HasComp(typeof(CompExplosive)) 
+                         && element.HasComp(typeof(CompQuality)) 
+                         && element.recipeMaker?.workSkill != null 
+                         && !blackListedWeapons.Contains(element.defName)
+                         && (!VREHussarsMod.settings.onlyVanillaWeapon || element.modContentPack?.IsOfficialMod == true)
+                         && (VREHussarsMod.settings.allowNonBiocodableWeapon || element.HasComp(typeof(CompBiocodable)));
         }
 
         public static GeneDef GetFromTemplate(WeaponGeneTemplateDef template, ThingDef def, int displayOrderBase)
         {
-            GeneDef geneDef = new GeneDef
+            GeneDef geneDef = new()
             {
                 defName = template.defName + "_" + def.defName,
                 geneClass = template.geneClass,
