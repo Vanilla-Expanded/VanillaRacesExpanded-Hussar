@@ -112,18 +112,7 @@ namespace VREHussars
         }
     }
 
-    [HarmonyPatch(typeof(BodyPartDef), "GetMaxHealth")]
-    public class GetMaxHealth_Patch
-    {
-        [HarmonyPriority(Priority.Last)]
-        private static void Postfix(BodyPartDef __instance, Pawn pawn, ref float __result)
-        {
-            if (pawn.genes != null && pawn.genes.HasActiveGene(VREH_DefOf.VREH_Giant))
-            {
-                __result *= 1.2f;
-            }
-        }
-    }
+  
 
     [HarmonyPatch(typeof(StatWorker), "StatOffsetFromGear")]
     public static class StatWorker_StatOffsetFromGear_Patch
