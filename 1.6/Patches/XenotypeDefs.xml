@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/XenotypeDef[defName="Hussar"]/genes</xpath>
+		<value>
+            <li>VREH_Dutiful</li>
+			<li>VREH_BulletproofSkin</li>
+			<li>VREH_Arrogant</li>
+			<li>VREH_Unconstrained</li>
+			<li>VREHT_WeaponAptitude_Randomizer</li>
+		</value>
+	</Operation>
+	
+</Patch>
+

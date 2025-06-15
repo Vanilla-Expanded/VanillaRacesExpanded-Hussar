@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<VRE_HussarsSettings>VRE - Hussar</VRE_HussarsSettings>
+
+	<VREH_Label_onlyVanillaWeapon>Aptitudes are only for vanilla weapons</VREH_Label_onlyVanillaWeapon>
+	<VREH_ToolTip_onlyVanillaWeapon>If enabled, weapon aptitudes genes will not be generated for mods.
+
+A restart is required.</VREH_ToolTip_onlyVanillaWeapon>
+
+	<VREH_Label_allowNonBiocodableWeapon>Allow non-biocodable weapon</VREH_Label_allowNonBiocodableWeapon>
+	<VREH_ToolTip_allowNonBiocodableWeapon>If disabled, genes will not be generated for non-biocodable weapons.
+
+A restart is required.</VREH_ToolTip_allowNonBiocodableWeapon>
+
+</LanguageData>
