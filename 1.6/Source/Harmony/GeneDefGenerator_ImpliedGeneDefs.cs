@@ -49,6 +49,7 @@ namespace VREHussars
                          && element.hasInteractionCell == false 
                          && element.building == null 
                          && !element.HasComp(typeof(CompExplosive)) 
+                         && !element.HasComp(typeof(CompUniqueWeapon))
                          && element.HasComp(typeof(CompQuality)) 
                          && element.recipeMaker?.workSkill != null 
                          && !blackListedWeapons.Contains(element.defName)

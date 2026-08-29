@@ -71,6 +71,7 @@
     <Compile Include="Genes\Gene_Dutiful.cs" />
     <Compile Include="Genes\Gene_RandomWeapon.cs" />
     <Compile Include="Genes\Gene_Weapon.cs" />
+    <Compile Include="Harmony\BackCompatibility_BackCompatibleDefName.cs" />
     <Compile Include="Harmony\GeneDefGenerator_ImpliedGeneDefs.cs" />
     <Compile Include="Harmony\Gene_OverrideBy.cs" />
     <Compile Include="Hediff\Hediff_ChemicalDependency_Luci.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Harmony\HarmonyPatches.cs" />
     <Compile Include="DefOfs\VREH_DefOf.cs" />
     <Compile Include="StaticCollectionsClass\StaticCollectionsClass.cs" />
+    <Compile Include="Utilities\UniqueWeaponUtility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
